@@ -1,0 +1,10 @@
+project: savantenvs/ravynos
+target: libpng_read_fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/libpng_read_fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/libpng_read_fuzzer
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/libpng_read_fuzzer/libpng_read_fuzzer.dict
+    timeout: 10

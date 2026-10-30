@@ -1,0 +1,9 @@
+project: savantenvs/ravynos
+target: cjpeg_fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/cjpeg_fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/cjpeg_fuzzer
+    libfuzzer: true
+    timeout: 10

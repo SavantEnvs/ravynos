@@ -1,0 +1,9 @@
+project: savantenvs/ravynos
+target: compress12_lossless_fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/compress12_lossless_fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/compress12_lossless_fuzzer
+    libfuzzer: true
+    timeout: 10
